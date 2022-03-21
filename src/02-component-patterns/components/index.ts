@@ -9,7 +9,7 @@ export { ProductTitle } from './ProductTitle';
 export { ProductButtons } from "./ProductButtons";
 
 
-
+// Para poder llamar ProductCard.Title, ProductCard.Image, ProductCard.Buttons
 export const ProductCard: ProductCardHOCProps = Object.assign(ProductCardHOC, {
     Title: ProductTitle,
     Image: ProductImage,
