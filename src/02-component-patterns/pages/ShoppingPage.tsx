@@ -17,13 +17,7 @@ export const ShoppingPage = () => {
     <div>
       <h1>Patterns</h1>
       <hr />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-        }}
-      >
+      <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",}}>
         {products.map((product) => (
           <ProductCard
             key={product.id}
