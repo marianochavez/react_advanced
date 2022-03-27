@@ -1,4 +1,5 @@
 import { ProductButtons } from './ProductButtons';
+// HOC higher order component
 import { ProductCard as ProductCardHOC } from './ProductCard';
 import { ProductImage } from './ProductImage';
 import { ProductTitle } from './ProductTitle';

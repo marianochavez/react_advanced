@@ -1,4 +1,4 @@
-import { createContext, ReactElement } from "react";
+import { createContext } from "react";
 
 import { useProduct } from "../hooks/useProduct";
 import {
