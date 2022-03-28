@@ -1,47 +1,13 @@
 import { Formik, Form } from 'formik';
 import { MyCheckboxInput, MySelectInput, MyTextInput } from '../components';
 import formJson from '../data/customForm.json';
-import * as Yup from 'yup';
+import { validationSchema } from '../validations/validationSchema';
 
 const initialValues: { [key: string]: any } = {};
-const requiredFields: { [key: string]: any } = {};
 
 for (const input of formJson) {
-
-    initialValues[input.name] = input.value || '';
-
-    if (!input.validations) continue;
-
-    let schema = Yup.string();
-
-    for (const rule of input.validations) {
-
-        if (rule.type === 'required') {
-            schema = schema.required(
-                (rule as any).message || 'Required'
-            );
-        }
-
-        if (rule.type === 'minLength') {
-            schema = schema.min(
-                (rule as any).value || 2,
-                (rule as any).message || `${input.name} is too short`
-            );
-        }
-
-        if (rule.type === 'email'){
-            schema = schema.email(
-                (rule as any).message || `${input.name} is not a valid email`
-            );
-        }
-
-        // other rules
-    }
-
-    requiredFields[input.name] = schema;
+    initialValues[input.name] = input.value;
 }
-
-const validationSchema = Yup.object({ ...requiredFields });
 
 export const DynamicForm = () => {
     return (
@@ -51,7 +17,7 @@ export const DynamicForm = () => {
             <Formik
                 initialValues={initialValues}
                 onSubmit={(values) => console.log(values)}
-                validationSchema={validationSchema}
+                validationSchema={validationSchema(formJson)}
             >
                 {(formik) => (
                     <Form noValidate>

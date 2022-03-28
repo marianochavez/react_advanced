@@ -13,6 +13,10 @@
       {
         "type": "minLength",
         "value": 5
+      },
+      {
+        "type": "maxLength",
+        "value": 15
       }
     ]
   },
