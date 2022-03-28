@@ -1,0 +1,76 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "Mariano",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "First Name is required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "placeholder": "Chavez",
+    "label": "Last Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "Last Name is required"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "user@gmail.com",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "Email is required label"
+      },
+      {
+        "type": "email",
+        "message": "Invalid email"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      { "value": "cod", "label": "COD" },
+      { "value": "csgo", "label": "CSGO" },
+      { "value": "wow", "label": "WoW" }
+    ],
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  },
+  {
+    "type": "checkbox",
+    "name": "terms",
+    "label": "Accept Terms",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
+  }
+]
